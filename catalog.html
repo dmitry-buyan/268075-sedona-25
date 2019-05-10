@@ -20,11 +20,68 @@
     </header>
 
     <main class="container">
-      <form>
-        <!-- Здесь будет форма поиска гостиниц-->
-      </form>
+      <section class="search-hotels">
+        <h2 class="visually-hidden">Подбор жилья</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Инфрастуктура:</legend>
+            <p>
+              <label>
+                <input type="checkbox" name="pool" checked> Бассейн
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="parking"> Парковка
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="wifi"> Wi-Fi
+              </label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <p>
+              <label>
+                <input type="checkbox" name="hotel" checked> Гостиница
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="motel" checked> Мотель
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="appartments" checked> Апартаменты
+              </label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <label>
+              от <input type="range" min="0">
+            </label>
+            <label>
+              до <input type="range" max="4000">
+            </label>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
       <section class="hotels">
         <h2 class="visually-hidden">Найденные гостиницы</h2>
+        <div class="sort">
+          <b>Найдено: 3</b>
+          <p>Сортировка:</p>
+          <ul>
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По рейтингу</a></li>
+          </ul>
+        </div>
         <ul>
           <li>
             <a href="#"><img src="http://placehold.it/135x90" alt="Amara Resort & Spa"></a>
