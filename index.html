@@ -44,7 +44,7 @@
             </ul>
           </li>
           <li class="features-item">
-            <h2>Там естьМост дьявола</h2>
+            <h2>Там есть Мост дьявола</h2>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </li>
           <li class="features-item">
@@ -62,16 +62,33 @@
         </ul>
       </section>
       <section class="search">
-        <h2>Заинтересовались?</h2>
+        <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
-        <button>Поиск гостиницы в Седоне</button>
-        <form>
-          <!-- Здесь будет форма поиска -->
+        <h2>Поиск гостиницы в Седоне</h2>
+        <form action="#" method="post">
+          <p>
+            <label>
+              Дата заезда: <input type="date" name="arrival-date">
+            </label>
+            <p>
+              <label>
+                Дата выезда: <input type="date" name="leave-date">
+              </label>
+          </p>
+          <p>
+            <label>
+              Взрослые: <input type="range" name="adult">
+            </label>
+            <label>
+              Дети: <input type="range" name="children">
+            </label>
+        </p>
+          <button type="submit">Найти</button>
         </form>
       </section>
       <section class="card">
         <h2 class="visually-hidden">Найти нас на карте</h2>
-        <img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны">
+        <img src="img/map.jpg" width="1200" height="593" alt="Наш адрес">
       </section>
     </main>
 
