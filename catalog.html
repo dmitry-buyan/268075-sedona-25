@@ -3,26 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона - Гостиницы</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
-          <img src="img/logo.svg" width="140" height="72" alt="Логотип сайта Седона">
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="main-nav__logo" href="index.html">
+          <img class="main-nav__logo-image" src="img/logo.svg" width="140" height="72" alt="Логотип сайта Седона">
         </a>
-        <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
+        <ul class="site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Информация</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Карта штата</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--active" href="catalog.html">Гостиницы</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
+    <main class="page-main">
       <section class="search-hotels">
         <h2 class="visually-hidden">Подбор жилья</h2>
-        <form action="#" method="post">
+        <form action="#" method="get">
           <fieldset>
             <legend>Инфрастуктура:</legend>
             <p>
@@ -62,10 +73,10 @@
           <fieldset>
             <legend>Стоимость в сутки (Р):</legend>
             <label>
-              от <input type="range" min="0">
+              от <input type="text" name="min">
             </label>
             <label>
-              до <input type="range" max="4000">
+              до <input type="text" name="max">
             </label>
           </fieldset>
           <button type="submit">Показать</button>
@@ -118,7 +129,7 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="page-footer">
       <a href="#">#VISITSEDONA</a>
       <div class="footer-social">
         <ul>
