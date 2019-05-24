@@ -109,17 +109,51 @@ a {
 }
 
 .button {
-  font-size: 21px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 21px;
   text-transform: inherit;
   color: #ffffff;
 }
 
-.search__button--title {
+.button-optional {
   background-color: #766357;
 }
 
-.search__button--send {
+.button-optional:hover,
+.button-optional:focus {
+  background-color: #604e43;
+}
+
+.button-optional:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+.search .button {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.button-main {
   background-color: #81b3d2;
+}
+
+.button-main:hover,
+.button-main:focus {
+  background-color: #669ec0;
+}
+
+.button-main:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.page-footer {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.page-footer__call {
+  font-size: 21px;
+  font-weight: 700;
 }
