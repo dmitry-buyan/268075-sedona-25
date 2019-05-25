@@ -31,11 +31,11 @@
     </header>
 
     <main class="page-main">
-      <section class="search-hotels">
+      <section class="search-hotel">
         <h2 class="visually-hidden">Подбор жилья</h2>
-        <form action="#" method="get">
+        <form class="search-hotel__form" action="#" method="get">
           <fieldset>
-            <legend>Инфрастуктура:</legend>
+            <legend class="search-hotel__title">Инфрастуктура:</legend>
             <p>
               <label>
                 <input type="checkbox" name="pool" checked> Бассейн
@@ -53,7 +53,7 @@
             </p>
           </fieldset>
           <fieldset>
-            <legend>Тип жилья:</legend>
+            <legend class="search-hotel__title">Тип жилья:</legend>
             <p>
               <label>
                 <input type="checkbox" name="hotel" checked> Гостиница
@@ -71,7 +71,7 @@
             </p>
           </fieldset>
           <fieldset>
-            <legend>Стоимость в сутки (Р):</legend>
+            <legend class="search-hotel__title">Стоимость в сутки (Р):</legend>
             <label>
               от <input type="text" name="min">
             </label>
@@ -79,7 +79,7 @@
               до <input type="text" name="max">
             </label>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button button--hotel" type="submit">Показать</button>
         </form>
       </section>
       <section class="hotels">

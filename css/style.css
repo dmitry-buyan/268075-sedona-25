@@ -157,3 +157,29 @@ a {
   font-size: 21px;
   font-weight: 700;
 }
+
+.search-hotel {
+  background: #5987af url("../img/filter-bg.jpg") no-repeat;
+}
+
+.search-hotel__form {
+  margin: 0;
+  padding: 0;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.search-hotel__title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.button--hotel {
+  background-color: transparent;
+}
+
+.button--hotel:hover,
+.button--hotel:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
