@@ -82,7 +82,7 @@
               <div class="filter__scale">
                 <div class="filter__bar"></div>
                 <div class="filter__toggle filter__toggle--min"></div>
-                <div class="filter__toggle filter__toggle--ma"></div>
+                <div class="filter__toggle filter__toggle--max"></div>
               </div>
               <button class="button button--hotel" type="submit">Показать</button>
             </div>
@@ -90,7 +90,9 @@
         </section>
         <section class="hotels">
           <h2 class="visually-hidden">Найденные гостиницы</h2>
-          <div class="hotels__sorting">
+
+          <div class="hotels__sort inner-container">
+            <b class="hotels__amount">Найдено: <span>3</span></b>
             <h3 class="hotels__subtitle">Сортировка:</h3>
             <ul class="hotels__sort-list">
               <li class="hotels__sort-item">
@@ -103,7 +105,7 @@
                 <a class="hotels__sort-link" href="#">По рейтингу</a>
               </li>
             </ul>
-            <ul class="hotels__sort-list">
+            <ul class="hotels__indicator">
               <li class="hotels__sort-item">
                 <a class="hotels__sort-link" href="#">По возрастанию</a>
               </li>
@@ -111,35 +113,41 @@
                 <a class="hotels__sort-link" href="#">По убыванию</a>
               </li>
             </ul>
-            <b class="hotels__amount">Найдено: <span>3</span></b>
           </div>
+
           <ul class="hotels__list">
             <li class="hotels__item">
-              <a class="hotels__image" href="#"><img src="img/hotel-1.jpg" width="135" height="90" alt="Amara Resort & Spa"></a>
-              <a class="hotels__title-link" href="#">
-                <h3 class="hotels__title">Amara Resort & Spa</h3>
-              </a>
-              <p><span>Гостиница </span><a class="button button-main" href="#">Подробнее</a></p>
-              <p><span>от 4000 Р. </span><a class="button button-optional" href="#">Забронировать</a></p>
-              <p class="hotels__rate">Рейтинг: 8,5</p>
+              <div class="inner-container">
+                <a class="hotels__image" href="#"><img src="img/hotel-1.jpg" width="135" height="90" alt="Amara Resort & Spa"></a>
+                <a class="hotels__title-link" href="#">
+                  <h3 class="hotels__title">Amara Resort & Spa</h3>
+                </a>
+                <p><span>Гостиница </span><a class="button button-main" href="#">Подробнее</a></p>
+                <p><span>от 4000 Р. </span><a class="button button-optional" href="#">Забронировать</a></p>
+                <span class="hotels__rate">Рейтинг: 8,5</span>
+              </div>
             </li>
             <li class="hotels__item">
-              <a class="hotels__image" href="#"><img src="img/hotel-2.jpg" width="135" height="90" alt="Desert Quail Inn"></a>
-              <a class="hotels__title-link" href="#">
-                <h3 class="hotels__title">Desert Quail Inn</h3>
-              </a>
-              <p><span>Мотель </span><a class="button button-main" href="#">Подробнее</a></p>
-              <p><span>от 3000 Р. </span><a class="button button-optional" href="#">Забронировать</a></p>
-              <p class="hotels__rate">Рейтинг: 8,9</p>
+              <div class="inner-container">
+                <a class="hotels__image" href="#"><img src="img/hotel-2.jpg" width="135" height="90" alt="Desert Quail Inn"></a>
+                <a class="hotels__title-link" href="#">
+                  <h3 class="hotels__title">Desert Quail Inn</h3>
+                </a>
+                <p><span>Мотель </span><a class="button button-main" href="#">Подробнее</a></p>
+                <p><span>от 3000 Р. </span><a class="button button-optional" href="#">Забронировать</a></p>
+                <span class="hotels__rate">Рейтинг: 8,9</span>
+              </div>
             </li>
             <li class="hotels__item">
-              <a class="hotels__image" href="#"><img src="img/hotel-3.jpg" width="135" height="90" alt="Villas at Poco Diablo"></a>
-              <a class="hotels__title-link" href="#">
-                <h3 class="hotels__title">Villas at Poco Diablo</h3>
-              </a>
-              <p><span>Апартаменты </span><a class="button button-main" href="#">Подробнее</a></p>
-              <p><span>от 2000 Р. </span><a class="button button-optional" href="#">Забронировать</a></p>
-              <p class="hotels__rate">Рейтинг: 9,2</p>
+              <div class="inner-container">
+                <a class="hotels__image" href="#"><img src="img/hotel-3.jpg" width="135" height="90" alt="Villas at Poco Diablo"></a>
+                <a class="hotels__title-link" href="#">
+                  <h3 class="hotels__title">Villas at Poco Diablo</h3>
+                </a>
+                <p><span>Апартаменты </span><a class="button button-main" href="#">Подробнее</a></p>
+                <p><span>от 2000 Р. </span><a class="button button-optional" href="#">Забронировать</a></p>
+                <span class="hotels__rate">Рейтинг: 9,2</span>
+              </div>
             </li>
           </ul>
         </section>
