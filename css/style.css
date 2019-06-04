@@ -719,7 +719,9 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  margin: 0 auto;
   padding: 30px 0;
+  width: 1056px;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -759,7 +761,6 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels__sort-link {
-  position: relative;
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted #81b3d2;
 }
@@ -779,13 +780,13 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
-.hotels__sort-link--up::before {
+.hotels__arrow {
+  position: relative;
+}
+
+.hotels__arrow::before {
   position: absolute;
   content: "";
-  /* width: 0; */
-  left: 26px;
-  top: -8px;
-  height: 0;
   border: 6px solid transparent;
   border-bottom-color: #cacaca;
   border-top: none;
@@ -794,19 +795,25 @@ input[type="radio"].visually-hidden {
   transform: scaleY(1.6);
 }
 
-.hotels__sort-link--down::before {
-  position: absolute;
-  content: "";
+.hotels__arrow--up::before {
+  left: 26px;
+  top: -8px;
+}
+
+.hotels__arrow--down::before {
   left: 18px;
   top: -9px;
-  /* width: 0;
-  height: 0; */
-  border: 6px solid transparent;
-  border-top-color: #81b3d2;
-  border-bottom: none;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  transform: scaleY(1.6);
+  transform: scaleY(1.6) rotate(180deg);
+}
+
+.hotels__arrow:hover::before,
+.hotels__arrow:focus::before {
+  border-bottom-color: #231f20;
+}
+
+.hotels__arrow:active::before,
+.hotels__arrow--current::before {
+  border-bottom-color: #81b3d2;
 }
 
 .hotels__list {
@@ -824,7 +831,22 @@ input[type="radio"].visually-hidden {
   border-top: 1px solid #e5e5e5;
 }
 
+.hotels__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 1056px;
+}
+
+.hotels__image-wrapper {
+  margin-right: 30px;
+}
+
 .hotels__title {
+  margin: 0;
+  margin-top: -5px;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
@@ -840,6 +862,8 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels__rate{
+  margin-left: auto;
+  margin-top: auto;
   background-color: #f2f2f2;
 }
 
@@ -849,9 +873,4 @@ input[type="radio"].visually-hidden {
   width: 1200px;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
-}
-
-.inner-container {
-  margin: 0 auto;
-  width: 1056px;
 }
