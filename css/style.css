@@ -844,12 +844,28 @@ input[type="radio"].visually-hidden {
   margin-right: 30px;
 }
 
+.hotels__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotels__title-link {
+  width: 100%;
+}
+
 .hotels__title {
   margin: 0;
   margin-top: -5px;
+  width: 100%;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
+}
+
+.hotels__about,
+.hotels__order {
+  margin: 0;
+  width: 110px;
 }
 
 .hotels__title:hover,
