@@ -408,6 +408,9 @@ input[type="radio"].visually-hidden {
 }
 
 .button-main {
+  box-sizing: border-box;
+  margin-right: 3px;
+  min-width: 110px;
   background-color: #81b3d2;
 }
 
@@ -844,13 +847,19 @@ input[type="radio"].visually-hidden {
   margin-right: 30px;
 }
 
+.hotels__image {
+  display: block;
+}
+
 .hotels__description {
   display: flex;
   flex-direction: column;
+  align-self: stretch;
 }
 
 .hotels__title-link {
-  width: 100%;
+  align-self: flex-start;
+  margin-bottom: 7px;
 }
 
 .hotels__title {
@@ -862,12 +871,6 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.hotels__about,
-.hotels__order {
-  margin: 0;
-  width: 110px;
-}
-
 .hotels__title:hover,
 .hotels__title:focus {
   color: #81b3d2;
@@ -877,9 +880,28 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.hotels__about,
+.hotels__order {
+  margin: 0;
+}
+
+.hotels__type {
+  display: inline-block;
+  margin-right: 3px;
+  min-width: 110px;
+}
+
+.hotels__order {
+  margin-top: auto;
+}
+
 .hotels__rate{
   margin-left: auto;
   margin-top: auto;
+  padding-top: 3px;
+  padding-right: 13px;
+  padding-bottom: 3px;
+  padding-left: 16px;
   background-color: #f2f2f2;
 }
 
