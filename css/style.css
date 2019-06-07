@@ -318,6 +318,7 @@ input[type="radio"].visually-hidden {
 }
 
 .search__item {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -327,13 +328,87 @@ input[type="radio"].visually-hidden {
   margin-bottom: 30px;
 }
 
+.remove {
+  position: absolute;
+  top: 0;
+  right: 89px;
+  padding: 0;
+  width: 25px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.add {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  padding: 0;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.remove::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 50%;
+  margin-top: -1px;
+  width: 12px;
+  height: 3px;
+  background-color: #a9a9a9;
+}
+
+.add::before,
+.add::after {
+  position: absolute;
+  content: "";
+  right: 13px;
+  top: 50%;
+  margin-top: -1px;
+  width: 12px;
+  height: 3px;
+  background-color: #a9a9a9;
+}
+
+.add::after {
+  transform: rotate(90deg);
+}
+
+.remove:hover::before,
+.remove:focus::before,
+.add:hover::before,
+.add:focus::before,
+.add:hover::after,
+.add:focus::after {
+  background-color: #000000;
+}
+
+.remove:active::before,
+.add:active::before,
+.add:active::after {
+  background-color: #81b3d2;
+}
+
 .search__form input {
   box-sizing: border-box;
+  margin-left: auto;
   width: 346px;
+  min-height: 38px;
   padding: 6px 30px 6px 13px;
   font: inherit;
   background-color: #f2f2f2;
   border: none;
+}
+
+.search__form .adult-amount,
+.search__form .children-amount {
+  padding-left: 30px;
+  text-align: center;
 }
 
 .search__form input:hover {
@@ -343,6 +418,33 @@ input[type="radio"].visually-hidden {
 .search__form input:focus {
   background-color: #ffffff;
   outline: 2px solid #e5e5e5;
+}
+
+.search__calendar {
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  width: 21px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.search__calendar:active,
+.search__calendar:focus {
+  outline: none;
+}
+
+.search__calendar:hover path,
+.search__calendar:focus path {
+  fill: #000000;
+}
+
+.search__calendar:active path {
+  fill: #81b3d2;
 }
 
 .search__wrapper {
