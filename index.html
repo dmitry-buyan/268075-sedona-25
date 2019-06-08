@@ -14,15 +14,23 @@
           <a class="main-nav__logo">
             <img class="main-nav__logo-image" src="img/logo.svg" width="140" height="72" alt="Логотип сайта Седона">
           </a>
-          <div class="site-list">
-            <div class="site-list__wrapper site-list__wrapper--first">
-              <a class="site-list__link" href="#">Информация</a>
-              <a class="site-list__link" href="#">Фото и видео</a>
-            </div>
-            <div class="site-list__wrapper site-list__wrapper--last">
-              <a class="site-list__link" href="#">Карта штата</a>
-              <a class="site-list__link" href="catalog.html">Гостиницы</a>
-            </div>
+          <div class="main-nav__wrapper">
+            <ul class="site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">Информация</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">Фото и видео</a>
+              </li>
+            </ul>
+            <ul class="site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">Карта штата</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Гостиницы</a>
+              </li>
+            </ul>
           </div>
         </nav>
       </header>
@@ -93,7 +101,7 @@
           <b class="search__title">Заинтересовались?</b>
           <p class="search__intro">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
           <button class="button button-optional">Поиск гостиницы в Седоне</button>
-          <form class="search__form" action="#" method="get">
+          <form class="search__form" action="https://echo.htmlacademy.ru" method="post">
             <p class="search__item">
               <label for="arrival">Дата заезда:</label>
               <input id="arrival" type="text" name="arrival-date">
@@ -131,7 +139,7 @@
         </section>
         <section class="map">
           <h2 class="visually-hidden">Мы на карте</h2>
-          <img class="map__image" src="img/map.jpg" width="1200" height="593" alt="Наш адрес">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d513449.952975264!2d-111.85847028416613!3d34.779215683169305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1560006405889!5m2!1sru!2sru" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
       </main>
 
@@ -166,5 +174,24 @@
         </p>
       </footer>
     </div>
+    <script>
+      var button = document.querySelector(".button-optional");
+      var popup = document.querySelector(".search__form");
+      var arrival = popup.querySelector("#arrival");
+      var leave = popup.querySelector("#leave");
+
+      button.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popup.classList.toggle("search__form--disable");
+        arrival.focus();
+      });
+
+      popup.addEventListener("submit", function(evt) {
+        if (!arrival.value || !leave.value) {
+          evt.preventDefault();
+          console.log("Fill the required fiedls");
+        }
+      });
+    </script>
   </body>
 </html>
