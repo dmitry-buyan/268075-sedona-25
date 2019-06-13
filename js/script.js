@@ -2,6 +2,8 @@ var button = document.querySelector(".button-optional");
 var popup = document.querySelector(".search__form");
 var arrival = popup.querySelector("#arrival");
 var leave = popup.querySelector("#leave");
+var adultAmount = popup.querySelector("#adult");
+var childrenAmount = popup.querySelector("#children");
 
 button.addEventListener("click", function(evt) {
   evt.preventDefault();
@@ -10,8 +12,8 @@ button.addEventListener("click", function(evt) {
 });
 
 popup.addEventListener("submit", function(evt) {
-  if (!arrival.value || !leave.value) {
+  if (!arrival.value || !leave.value || !adultAmount.value || !childrenAmount.value) {
     evt.preventDefault();
-    console.log("Fill the required fiedls");
+    popup.classList.add("search__form--error");
   }
 });

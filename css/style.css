@@ -368,6 +368,11 @@ input[type="radio"].visually-hidden {
           animation-duration: 0.7s;
 }
 
+.search__form--error {
+  animation-name: error;
+  animation-duration: 0.09s;
+}
+
 .search__form--disable {
   overflow: hidden;
   -webkit-animation-name: slide-up;
@@ -376,7 +381,6 @@ input[type="radio"].visually-hidden {
           animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: forwards;
-
 }
 
 @-webkit-keyframes slide-up {
@@ -411,6 +415,42 @@ input[type="radio"].visually-hidden {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes error {
+  0% {
+    transform: translateX(-10px);
+  }
+  10% {
+    transform: translateX(10px);
+  }
+  20% {
+    transform: translateX(10px);
+  }
+  30% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+  70% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  90% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
